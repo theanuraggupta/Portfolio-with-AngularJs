@@ -1,3 +1,5 @@
-# www.anuraggupta.in
+# htt://www.anuraggupta.in
+Designed and deployed my portfolio website
 
-Designed my own portfolio website using html and css
+# Technology Used
+HTML, Css
