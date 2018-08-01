@@ -1,4 +1,4 @@
-# htt://www.anuraggupta.in
+# http://www.anuraggupta.in
 Designed and deployed my portfolio website
 
 # Technology Used
