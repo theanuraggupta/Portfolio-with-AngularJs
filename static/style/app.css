@@ -140,9 +140,19 @@ footer{
         width: 100%;
     }
     
+    .columns,
+    .row{
+        max-height: 60px !important;
+    }
     .me,
     .img-responsive{
         height: auto !important;
+    }
+        
+    #nav .sf-menu > li > a {
+        padding-right: 10px;
+        height: 30px;
+        line-height: 30px;
     }
 }
 
