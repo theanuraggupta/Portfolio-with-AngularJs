@@ -2,11 +2,11 @@ $base-color: #777777;
 $anchor-link-color: #999;
 
 body{
-    background-color: #ffffff;
-    font-family: 'Lato';
+    font-family: "Karla","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 2em;
+    background-color: #fff;
     color: $base-color;
     height: 100%;
     width: 100%;
@@ -17,21 +17,27 @@ body{
     background: #0b233e;    
     padding: 0;
     width: 100%;
-    z-index: 101;
-    max-height: 100px;
+    z-index: 10;
+    height: 70%;
     position: relative;
     text-align: right;
     margin-bottom: 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #fff;
     -moz-transform: translateZ(0);
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
+    background: url(../img/IMG_0729.JPG) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 #nav {
+    padding: 6px;
     display: inline-block;
     vertical-align: middle;
-    height: 100%;
+    height: inherit;
     width: 100%;
 }
 #nav .sf-menu {
@@ -50,8 +56,8 @@ body{
 #nav .sf-menu > li > a {
     display: block;
     padding: 0;
-    height: 100px;
-    line-height: 100px;
+    height: 70%;
+    line-height: 10px;
     margin: 0 0 0 30px;
     font-weight: 500;
     color: #fff;
@@ -77,12 +83,9 @@ body{
 }
 
 .row {
+    padding: 0px;
+    margin: 0;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    margin-bottom: 0;
-    max-width: 80em;
 }
 
 .me{
@@ -105,21 +108,23 @@ h1{
 }
 
 a{
+    color: #fff;
     margin-right: 3rem;
     text-decoration: none !important;
 }
 
 footer{
-    background: #000;
+    background: transparent;
     position: fixed;
     width: 100%;
+    color: #fff !important;
     bottom: 0;
     border-bottom: 2px solid #437C7B;
 }
 
 
 .logoimg {
-    max-height: 70px;
+    max-height: 48px;
     width: 100%;
 }
 
@@ -155,12 +160,12 @@ footer{
 
 @media only screen and (min-width: 768px){
     .navbar{
-        min-height: 70px !important;
+        min-height:48px !important;
     }
     
     #nav .sf-menu > li > a {
         font-weight: 700;
-        font-size: 15px;
+        line-height: 2em;
         margin-left: 25px;
         color: #fff;
         height: inherit;
