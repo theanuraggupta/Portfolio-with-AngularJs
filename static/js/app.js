@@ -3,7 +3,7 @@ app.controller("aController", function($scope){
    $scope.userInfo = {
        firstName: "Anurag",
        lastName: "Gupta",
-       designation: "Web Developer",
+       designation: "Programmer / Web Developer",
        description:""
    }; 
     
