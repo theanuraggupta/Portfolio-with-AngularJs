@@ -1,13 +1,13 @@
-$base-color: #fff;
+$white: #fff;
 $anchor-link-color: #999;
-$border-color: #44c7f5;
+$base-color: #44c7f5;
 
 body{
+    //border-top: 3px solid $base-color;
     width: 100%;
     height: 100%;
-    color: $base-color;
-    background-color: $base-color;
-    font-size: 16px;
+    color: $white;
+    background-color: $white;
     font-family: "Karla","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: normal;
     line-height: 2em;
@@ -16,16 +16,23 @@ body{
     white-space: nowrap;
 }
 
-.text-blue{
-    color: $border-color;
+.base-color{
+    color: $base-color;
+}
+
+.cursor-pointer{
+    cursor: pointer;
 }
 
 section{
     position: absolute;
     width: 100%;
-    height: 80%;
+    height: 94%;
     margin: 0 auto;
-    border-bottom: 2px solid $border-color;
+    z-index: 9;
+    overflow-y: scroll;
+    white-space: normal;
+   word-wrap: break-word;
     -moz-transform: translateZ(0);
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
@@ -41,6 +48,15 @@ section{
         .row{
             text-transform: uppercase;
         }
+
+        .me{
+            border: 2px solid $base-color;
+            height: 40%;
+            border-radius: 3px;
+            margin: 0 auto;
+            margin-top: 5%;
+        }
+
         .img-box{
             margin: 0 auto;
             position: absolute;
@@ -55,7 +71,7 @@ section{
         }
         h3{
             margin: 10px 0;
-            font-weight: 500;
+            font-weight: 600;
             font-family: monospace !important;    
         }
     }
@@ -67,76 +83,72 @@ section{
     width: 100%;
 }
 
-.me{
-    border: 2.5px solid $border-color;
-    height: 40%;
-    border-radius: 1.5px;
+a{
+    color: $base-color;
+    &:focus,
+    &:hover{
+        color: $base-color;
+    }
 }
 
-h1{
-    font-stretch: extra-expanded;
-    font: 400 4rem/1em 'Roboto Condensed';
+.anchor-border a{
+    color: $white;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    text-decoration: none !important;
+    border: 2px solid $white;
+    border-radius: 2px;
+    padding: 0px 21px 14px 8px;
+    line-height: 0em;    
+    border-radius: 2px;    
+    position: relative;    
+    line-height: 0px;
+    &:hover{
+        color: $base-color; 
+        border-color: $base-color;
+    }
 }
 
 .far,
 .fab{
     cursor: pointer;
-    font-size: 2rem;
-}
-
-a{
-    color: $base-color;
-    margin-right: 3rem;
-    text-decoration: none !important;
+    font-size: 14px;
+    z-index: 99;
+    margin: 0 auto;
+    position: absolute; 
 }
 
 footer{
-    background: transparent;
+    z-index: 99;
+    background: $white;
     position: fixed;
     width: 100%;
-    color: $base-color !important;
+    color: #000 !important;
     bottom: 0;
-    border-bottom: 2px solid $border-color;
-}
-
-
-.logoimg {
-    max-height: 48px;
-    width: 100%;
-}
-
-@media only screen and (min-width: 64.063em){
-    .columns {
-        position: relative;
-        padding-left: 0.9375em;
-        padding-right: 0.9375em;
-        float: left;
-    }
-    .large-4 {
-        width: 33.33333%;
-    }
-    .large-8 {
-        width: 66.66667%;
-    }
-    .large-up{
-        display: inherit !important;
-    }
+    border-bottom: 3px solid $base-color;
 }
 
 //mobile
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 599px) {
     /* For mobile phones: */
     [class*="col-"] {
         width: 100%;
     }
-    .me{
-        margin-top: 5%;
+    .anchor-border a{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    h3{
+        font-size: 20px !important;
+    }
+    h6{
+        font-size: 11px !important;
     }
 }
 
 //desktop
-@media only screen and (min-width: 768px){
-    .me{
-        margin-top: 5%;
+@media only screen and (min-width: 600px){
+    body{
+        font-size: 16px !important;
     }
 }
