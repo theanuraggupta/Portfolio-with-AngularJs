@@ -2,7 +2,7 @@
 hosted in Amazon EC2 server
 
 # Technology Used
-HTML, SCSS, Angular
+HTML, SCSS, AngularJs
 
 Screenshots
 
