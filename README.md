@@ -4,7 +4,7 @@ hosted in Amazon EC2 server
 # Technology Used
 HTML, SCSS, AngularJs
 
-Screenshots
+# Screenshots
 
 Desktop View
 
