@@ -2,7 +2,7 @@
 http://www.anuraggupta.in hosted in Amazon EC2 server
 
 # Technology Used
-HTML, SCSS, AngularJs
+HTML, SCSS, Bootstrap
 
 # Screenshots
 
