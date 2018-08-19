@@ -1,5 +1,5 @@
-# http://www.anuraggupta.in
-hosted in Amazon EC2 server
+# Url
+http://www.anuraggupta.in hosted in Amazon EC2 server
 
 # Technology Used
 HTML, SCSS, AngularJs
