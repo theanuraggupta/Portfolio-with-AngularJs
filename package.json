@@ -1,8 +1,5 @@
 {
   "name": "anuraggupta.in",
   "version": "0.0.1",
-  "private": true,
-  "main": "static/js/app.js",
-  "author": "Anurag Gupta",
-  "description": "Personal Website"
+  "private": true
 }
