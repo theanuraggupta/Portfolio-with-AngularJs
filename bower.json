@@ -1,0 +1,17 @@
+{
+  "name": "anuraggupta.in",
+  "version": "0.0.1",
+  "main": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "angular": "~1.4.5",
+    "angular-ui-router": "~0.2"
+  },
+  "resolutions": {
+    "angular": "~1.4.5"
+  }
+}

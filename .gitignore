@@ -1,1 +1,5 @@
 *.zip
+bower_components
+*.scssc
+*.map
+.sass-cache
