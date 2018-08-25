@@ -15,7 +15,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
             requireBase: false
         });
     }
-    $urlRouterProvider.otherwise('/archive');
+    $urlRouterProvider.otherwise('/');
 }]);
 app.controller("aController", ['$scope', '$state', function($scope, $state){
     $scope.$state = $state;
@@ -32,8 +32,5 @@ app.controller("aController", ['$scope', '$state', function($scope, $state){
         contents: [{
             subtitle: "Difference between One way and Two way data binding"
         }]
-    }]
-    setTimeout(function(){
-        $state.go('archive');
-    },50);
+    }];
 }]);
