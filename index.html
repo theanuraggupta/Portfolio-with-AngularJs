@@ -18,7 +18,7 @@
     </head>
     <body ng-cloak="" class="ng-cloak">
         <div class="nav">
-            <ul class="text-left pull-left" ng-if="$state.current.name!=='/'">
+            <ul class="text-left pull-left" ng-hide="$state.current.name==='/'">
                 <li>
                     <a ui-sref="/" alt="Home">
                         <i class="fa fa-home"></i>
@@ -26,16 +26,14 @@
                 </li>
             </ul>
             <ul class="text-right pull-right">
-                <li>
-                    <a ui-sref="archive" ng-if="$state.current.name!=='archive'" style="border-right: 1px solid #fff;" title="Archive">
-                        <i class="fas fa-rss"></i>
-                        <span class="hidden-xs">Archive</span>
-                    </a>
-                    <a target="_blank" href="https://github.com/anurag01gupta" title="Github">
-                        <i class="fas fa-project-diagram"></i>
-                        <span class="hidden-xs">Projects</span>
-                    </a>
-                </li>
+                <a ui-sref="archive" ng-if="$state.current.name!=='archive'" style="border-right: 1px solid #fff;" title="Archive">
+                    <i class="fas fa-rss"></i>
+                    <span class="hidden-xs">Archive</span>
+                </a>
+                <a target="_blank" href="https://github.com/anurag01gupta" title="Github">
+                    <i class="fas fa-project-diagram"></i>
+                    <span class="hidden-xs">Projects</span>
+                </a>
             </ul>
         </div>
         <div id="ui-view" ui-view></div>

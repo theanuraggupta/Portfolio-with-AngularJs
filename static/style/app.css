@@ -35,7 +35,7 @@ body {
     padding-right: 5px; }
     .nav ul li {
       list-style: none; }
-  .nav .text-right li a {
+  .nav .text-right a {
     padding-right: 14px;
     margin-left: 14%; }
   .nav a {
@@ -182,16 +182,16 @@ footer {
     margin-top: 0; }
 
   .nav {
-    font-size: 12px;
     padding-left: 0;
     padding-right: 0;
     margin: 10px; }
     .nav ul {
+      margin-right: 1em;
       padding-left: 5px;
-      padding-right: 5px; }
-    .nav .text-right li a {
-      padding-right: 4%;
-      padding-left: 2%; }
+      padding-right: 10px; }
+    .nav .text-right a {
+      padding-right: 9%;
+      padding-left: 9%; }
     .nav i {
       font-size: 1.33333em;
       line-height: .75em;

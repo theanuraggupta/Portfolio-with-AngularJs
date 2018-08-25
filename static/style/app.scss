@@ -44,7 +44,7 @@ body{
           list-style: none;
         }
     }
-    .text-right li{
+    .text-right {
         a{
             padding-right: 14px;
             margin-left: 14%;
@@ -230,18 +230,18 @@ footer{
         margin-top: 0;
     }
     .nav{
-        font-size: 12px;
         padding-left: 0;
         padding-right: 0;
         margin: 10px;
         ul{
+            margin-right: 1em;
             padding-left: 5px;
-            padding-right: 5px;
+            padding-right: 10px;
         }
-        .text-right li{
+        .text-right {
             a{
-                padding-right: 4%;
-                padding-left: 2%;
+                padding-right: 9%;
+                padding-left: 9%;
             }
         }
         i{
