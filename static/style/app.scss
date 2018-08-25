@@ -2,13 +2,16 @@ $white: #fff;
 $anchor-link-color: #999;
 $base-color: #44c7f5;
 
+.base-color{
+    color: $base-color;
+}
+
 #ui-view,
 body{
     //border-top: 3px solid $base-color;
     width: 100%;
     height: 100%;
     color: $white !important;
-    background-color: $white;
     font-family: "Karla","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: normal;
     line-height: 2em;
@@ -16,9 +19,52 @@ body{
     word-break: break-word;
     white-space: nowrap;
 }
+body{
+    background: url(../img/table1.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -moz-transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    overflow-y: scroll;
+}
 
-.base-color{
-    color: $base-color;
+.nav{
+    padding-left: 12%;
+    padding-right: 12%;
+    margin: 0;
+    ul{
+        margin: 0;
+        li{   
+          list-style: none;
+        }
+    }
+    .text-right li{
+        a{
+            margin-left: 10%;
+        }
+    }
+    a{
+        font-size: 13px;
+        text-decoration: none;
+        color: $white;
+        &:focus,
+        &:hover{
+            color: $base-color;
+            text-decoration: none !important
+        }
+    }
+}
+
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+    display: none !important;
 }
 
 .cursor-pointer{
@@ -31,17 +77,16 @@ section{
     height: inherit;
     margin: 0 auto;
     z-index: 9;
-    overflow-y: scroll;
     white-space: normal;
     word-wrap: break-word;
-    -moz-transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    background: url(../img/table1.png) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    
+    a{
+        color: $base-color;
+        &:focus,
+        &:hover{
+            color: $base-color;
+        }
+    }
     .panel{
         height: inherit; 
         position: relative;
@@ -55,7 +100,7 @@ section{
             height: 33%;
             border-radius: 15rem;
             margin: 0 auto;
-            margin-top: 5%
+            margin-top: 4%
         }
 
         .img-box{
@@ -84,13 +129,6 @@ section{
     width: 100%;
 }
 
-a{
-    color: $base-color;
-    &:focus,
-    &:hover{
-        color: $base-color;
-    }
-}
 
 h3{
     font-size: 20px;
@@ -138,6 +176,20 @@ footer{
     /* For mobile phones: */
     [class*="col-"] {
         width: 100%;
+    }
+    .nav{
+        font-size: 12px;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 10px;
+        ul{
+            margin: 0;
+        }
+        .text-right li{
+            a{
+                padding-left: 2%;
+            }
+        }
     }
     .anchor-border a{
         margin-left: 8px;

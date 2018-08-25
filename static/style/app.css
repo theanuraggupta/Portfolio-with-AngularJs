@@ -1,9 +1,11 @@
+.base-color {
+  color: #44c7f5; }
+
 #ui-view,
 body {
   width: 100%;
   height: 100%;
   color: #fff !important;
-  background-color: #fff;
   font-family: "Karla","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: normal;
   line-height: 2em;
@@ -11,8 +13,42 @@ body {
   word-break: break-word;
   white-space: nowrap; }
 
-.base-color {
-  color: #44c7f5; }
+body {
+  background: url(../img/table1.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -moz-transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  overflow-y: scroll; }
+
+.nav {
+  padding-left: 12%;
+  padding-right: 12%;
+  margin: 0; }
+  .nav ul {
+    margin: 0; }
+    .nav ul li {
+      list-style: none; }
+  .nav .text-right li a {
+    margin-left: 10%; }
+  .nav a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #fff; }
+    .nav a:focus, .nav a:hover {
+      color: #44c7f5;
+      text-decoration: none !important; }
+
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important; }
 
 .cursor-pointer {
   cursor: pointer; }
@@ -23,17 +59,12 @@ section {
   height: inherit;
   margin: 0 auto;
   z-index: 9;
-  overflow-y: scroll;
   white-space: normal;
-  word-wrap: break-word;
-  -moz-transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  background: url(../img/table1.png) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+  word-wrap: break-word; }
+  section a {
+    color: #44c7f5; }
+    section a:focus, section a:hover {
+      color: #44c7f5; }
   section .panel {
     height: inherit;
     position: relative;
@@ -45,7 +76,7 @@ section {
       height: 33%;
       border-radius: 15rem;
       margin: 0 auto;
-      margin-top: 5%; }
+      margin-top: 4%; }
     section .panel .img-box {
       margin: 0 auto;
       position: absolute;
@@ -66,11 +97,6 @@ section {
   padding: 0px;
   margin: 0;
   width: 100%; }
-
-a {
-  color: #44c7f5; }
-  a:focus, a:hover {
-    color: #44c7f5; }
 
 h3 {
   font-size: 20px; }
@@ -112,6 +138,16 @@ footer {
   /* For mobile phones: */
   [class*="col-"] {
     width: 100%; }
+
+  .nav {
+    font-size: 12px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 10px; }
+    .nav ul {
+      margin: 0; }
+    .nav .text-right li a {
+      padding-left: 2%; }
 
   .anchor-border a {
     margin-left: 8px;
