@@ -16,19 +16,25 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
         <link rel="stylesheet" href="static/style/app.css">
     </head>
-    <body ng-cloak="">
+    <body ng-cloak="" class="ng-cloak">
         <div class="nav">
-            <ul class="text-left pull-left" ng-hide="$state.current.name==='/'">
+            <ul class="text-left pull-left" ng-if="$state.current.name!=='/'">
                 <li>
                     <a ui-sref="/" alt="Home">
-                        <i class="fa fa-home fa-lg"></i>
+                        <i class="fa fa-home"></i>
                     </a>
                 </li>
             </ul>
             <ul class="text-right pull-right">
                 <li>
-                    <a ui-sref="archive" ng-hide="$state.includes('archive') || true">Archive</a>
-                    <a target="_blank" href="https://github.com/anurag01gupta" title="Github">Projects</a>
+                    <a ui-sref="archive" ng-if="$state.current.name!=='archive'" style="border-right: 1px solid #fff;" title="Archive">
+                        <i class="fas fa-rss"></i>
+                        <span class="hidden-xs">Archive</span>
+                    </a>
+                    <a target="_blank" href="https://github.com/anurag01gupta" title="Github">
+                        <i class="fas fa-project-diagram"></i>
+                        <span class="hidden-xs">Projects</span>
+                    </a>
                 </li>
             </ul>
         </div>

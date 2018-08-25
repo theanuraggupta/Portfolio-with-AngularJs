@@ -1,0 +1,21 @@
+<div id="archive">
+    <div class="container">
+        <div>
+            <h3 style="width:100%;display:inline-block;word-break: break-word;white-space: normal;">Archive &nbsp;<i class="fas fa-rss" style="display:inline; color:orange"></i></h3>
+        </div>
+        <hr>
+        <div class="input-group col-md-6 col-xs-12 input-group-sm" style="margin: 0 auto;margin-bottom: 10px;">
+            <input class="form-control input-sm" placeholder="Search" ng-model="searchField" autocomplete="off" />
+            <span class="input-group-addon search-addon"><i class="fa fa-search "></i></span>
+        </div>
+        <span class="post-tag" ng-repeat="post in posts | filter: searchField">
+            <b>
+                <a href="{{post.href}}">
+                    <i class="fas fa-tag"></i>
+                    <span ng-bind="::post.title"></span>
+                </a>
+            </b>
+            &nbsp;&nbsp;
+        </span>
+    </div>
+</div>
