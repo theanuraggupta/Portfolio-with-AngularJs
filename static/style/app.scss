@@ -18,18 +18,16 @@ body{
     letter-spacing: 0.1em;
     word-break: break-word;
     white-space: nowrap;
+    overflow-y: scroll;
 }
 body{
+    position: fixed;
     height: 100% !important;
     background: url(../img/table1.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    -moz-transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    overflow-y: scroll;
 }
 
 .nav{
