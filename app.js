@@ -1,39 +1,39 @@
-var port = process.env.PORT || 3000,
-    http = require('http'),
-    fs = require('fs'),
-    html = fs.readFileSync('index.html');
-
-var log = function(entry) {
-    fs.appendFileSync('/tmp/sample-app.log', new Date().toISOString() + ' - ' + entry + '\n');
-};
-
-var server = http.createServer(function (req, res) {
-    if (req.method === 'POST') {
-        var body = '';
-
-        req.on('data', function(chunk) {
-            body += chunk;
-        });
-
-        req.on('end', function() {
-            if (req.url === '/') {
-                log('Received message: ' + body);
-            } else if (req.url = '/scheduled') {
-                log('Received task ' + req.headers['x-aws-sqsd-taskname'] + ' scheduled at ' + req.headers['x-aws-sqsd-scheduled-at']);
-            }
-
-            res.writeHead(200, 'OK', {'Content-Type': 'text/plain'});
-            res.end();
-        });
-    } else {
-        res.writeHead(200);
-        res.write(html);
-        res.end();
+var app = angular.module('anuraggupta', ['ui.router']);
+app.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function($stateProvider, $urlRouterProvider, $httpProvider) {
+    'use strict';
+    //initialize get if not there
+    if (!$httpProvider.defaults.headers.get) {
+        $httpProvider.defaults.headers.get = {};    
     }
-});
+    // stop cache data storage for browsers
+    $httpProvider.defaults.headers.get['Cache-Control'] = 'no-cache';
+    $httpProvider.defaults.headers.get['Pragma'] = 'no-cache';
+    $stateProvider.state('/', {
+        url: '/',
+        templateUrl: 'home.html',
+        controller: 'mainController'
+    });
+    $stateProvider.state('archive', {
+        url: '/archive',
+        templateUrl: 'archive.html',
+        controller: 'mainController'
+    });
+    $urlRouterProvider.otherwise('/');
+}]);
+app.controller("mainController", ['$scope', '$state', function($scope, $state){
+    $scope.$state = $state;
+    $scope.userInfo = {
+        firstName: "Anurag",
+        lastName: "Gupta",
+        designation: "Programmer / Web Developer",
+        description:""
+    };
 
-// Listen on port 3000, IP defaults to 127.0.0.1
-server.listen(port);
-
-// Put a friendly message on the terminal
-console.log('Server running at http://127.0.0.1:' + port + '/');
+    $scope.posts = [{
+        title: "Angular Js",
+        href: "angularjs",
+        contents: [{
+            subtitle: "Difference between One way and Two way data binding"
+        }]
+    }];
+}]);

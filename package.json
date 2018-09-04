@@ -4,5 +4,13 @@
   "private": true,
   "main": "static/js/app.js",
   "author": "Anurag Gupta",
-  "description": "Personal Website"
+  "description": "Personal Website",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anurag01gupta/anurag01gupta.github.io.git"
+  }
 }

@@ -22,7 +22,7 @@ body{
 body{
     position: fixed;
     height: 100% !important;
-    background: url(../img/table1.png) no-repeat center center fixed;
+    background: url(./img/background.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -129,7 +129,7 @@ section{
         .img-box{
             margin: 0 auto;
             position: absolute;
-            background: url(../img/me.png) no-repeat center center fixed;
+            background: url(./img/profilephoto.png) no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
