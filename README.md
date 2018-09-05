@@ -1,8 +1,8 @@
 # Url
-http://www.anuraggupta.in hosted in Amazon EC2 server
+http://www.anuraggupta.in hosted in Cloudfare using Github Pages
 
 # Technology Used
-HTML, SCSS, Bootstrap
+HTML, AngularJS, SCSS, Bootstrap
 
 # Screenshots
 
