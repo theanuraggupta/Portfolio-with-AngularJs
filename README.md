@@ -1,5 +1,5 @@
 # Url
-http://www.anuraggupta.in hosted in Cloudfare using Github Pages
+https://www.anuraggupta.in hosted in Cloudfare using Github Pages
 
 # Technology Used
 HTML, AngularJS, SCSS, Bootstrap
