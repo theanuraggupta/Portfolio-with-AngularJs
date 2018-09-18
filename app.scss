@@ -27,7 +27,7 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .nav{
@@ -184,7 +184,7 @@ h3{
 
 footer{
     z-index: 99;
-    position: absolute;
+    position: fixed;
     width: 100%;
     background: #4a4e4e;
     bottom: 0;
@@ -199,6 +199,9 @@ footer{
         &:hover{
             color: $base-color !important;
         }
+    }
+    p{
+        margin: 0 !important;
     }
 }
 
@@ -286,11 +289,7 @@ footer{
     }
 }
 
-[ng\:cloak],
 [ng-cloak],
-[data-ng-cloak],
-[x-ng-cloak],
-.ng-cloak,
-.x-ng-cloak {
+.ng-cloak {
     display: none !important;
 }

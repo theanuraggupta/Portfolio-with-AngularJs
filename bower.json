@@ -4,7 +4,6 @@
   "main": "index.html",
   "ignore": [
     "**/.*",
-    "node_modules",
     "bower_components"
   ],
   "dependencies": {
