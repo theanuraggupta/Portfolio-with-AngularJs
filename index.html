@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/angular-breadcrumb/dist/angular-breadcrumb.min.js"></script>
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -17,15 +18,16 @@
     </head>
     <body ng-cloak class="ng-cloak" ng-app="anuraggupta" ng-controller="mainController">
         <div class="nav">
-            <ul class="text-left pull-left" ng-hide="$state.current.name==='/'">
+            <ul class="text-left pull-left"ng-hide="$state.current.name==='/'">
                 <li>
                     <a ui-sref="/" alt="Home">
                         <i class="fa fa-home"></i>
+                        <span>Home</span>
                     </a>
                 </li>
             </ul>
             <ul class="text-right pull-right">
-                <a ui-sref="archive" ng-if="$state.current.name!=='archive'" style="border-right: 1px solid #fff;" title="Archive">
+                <a ui-sref="archive" ng-hide="$state.current.name==='archive'" style="border-right: 1px solid #fff;" title="Archive">
                     <i class="fas fa-rss"></i>
                     <span class="hidden-xs">Archive</span>
                 </a>

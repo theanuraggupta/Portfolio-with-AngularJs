@@ -7,8 +7,9 @@
     "bower_components"
   ],
   "dependencies": {
-    "angular": "/",
-    "angular-ui-router": "~0.2"
+    "angular": "~1.4.5",
+    "angular-ui-router": "~0.2",
+    "angular-breadcrumb": "~0.5.0"
   },
   "resolutions": {
     "angular": "~1.4.5"

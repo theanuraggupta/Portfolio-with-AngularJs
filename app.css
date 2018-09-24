@@ -2,10 +2,34 @@
   color: #44c7f5;
 }
 
+.display-inline {
+  display: inline !important;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.margin-top-5 {
+  margin-top: 5px !important;
+}
+
 #ui-view,
 body {
   width: 100%;
-  height: 87%;
+  height: 90%;
   color: #fff !important;
   font-family: "Karla", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
@@ -16,6 +40,7 @@ body {
 }
 
 body {
+  border-top: 3px solid #44c7f5;
   position: fixed;
   height: 100% !important;
   background: url(./img/background.png) no-repeat center center fixed;
@@ -33,6 +58,8 @@ body {
 }
 .nav ul {
   margin: 0;
+  box-sizing: border-box;
+  width: 26%;
   padding-left: 15px;
   padding-right: 5px;
 }
@@ -41,7 +68,7 @@ body {
 }
 .nav .text-right a {
   padding-right: 14px;
-  margin-left: 14%;
+  margin-left: 8%;
 }
 .nav a {
   font-size: 13px;
@@ -54,37 +81,58 @@ body {
 }
 
 #archive .container {
+  position: relative;
   color: #000 !important;
   width: 75%;
   text-align: center;
   font-size: 14px !important;
   padding: 10px;
-  height: 100%;
+  height: auto;
+  min-height: 300px;
   background: #fff;
-  text-align: center;
   border-radius: 2px;
+  border: 1px solid #000;
 }
-#archive .container .post-tag {
+#archive .container .tag-container {
   display: inline-block;
-  background: rgba(106, 159, 181, 0.15);
-  color: #000;
-  padding: 0 0.5rem;
-  margin-right: 0.5rem;
+}
+#archive .container .tag-container .post-tag {
+  display: inline-block;
+  color: #44c7f5 !important;
+  background: rgba(91, 173, 206, 0.22);
+  padding-top: 0;
+  padding-right: 0.5rem;
+  padding-bottom: 0;
+  padding-left: 0.5rem;
+  margin-right: 0.8rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   border-radius: 4px;
-  -webkit-transition: all 0.1s ease-in-out;
-  -moz-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
 }
-#archive .container .post-tag:hover {
-  color: #000;
+#archive .container .tag-container .post-tag:hover {
+  color: #44c7f5 !important;
   text-decoration: none;
   transform: scale(1.07);
 }
 
-.cursor-pointer {
-  cursor: pointer;
+[ng-cloak],
+.ng-cloak {
+  display: none !important;
+}
+
+.breadcrumb {
+  padding: 0 !important;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  width: 20%;
+  position: absolute;
+  text-align: left;
+  font-size: 12px;
+}
+.breadcrumb .active {
+  font-size: 14px;
+  color: #9a8c8c;
 }
 
 section {
@@ -274,10 +322,6 @@ footer p {
   .row {
     padding: 2px;
   }
-}
-[ng-cloak],
-.ng-cloak {
-  display: none !important;
 }
 
 /*# sourceMappingURL=app.css.map */

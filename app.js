@@ -1,4 +1,4 @@
-var app = angular.module('anuraggupta', ['ui.router']);
+var app = angular.module('anuraggupta', ['ui.router', 'ncy-angular-breadcrumb']);
 app.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function($stateProvider, $urlRouterProvider, $httpProvider) {
     'use strict';
     //initialize get if not there
@@ -11,12 +11,34 @@ app.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function($s
     $stateProvider.state('/', {
         url: '/',
         templateUrl: 'home.html',
-        controller: 'mainController'
+        controller: 'mainController',
+        ncyBreadcrumb: {
+          label: 'Home'
+        }
     });
     $stateProvider.state('archive', {
         url: '/archive',
         templateUrl: 'archive.html',
-        controller: 'mainController'
+        controller: 'mainController',
+        ncyBreadcrumb: {
+          label: 'Archive'
+        }
+    });
+    $stateProvider.state('archive.angularjs', {
+        url: '/angularjs',
+        templateUrl: 'angularjs.html',
+        controller: 'mainController',
+        ncyBreadcrumb: {
+          label: 'AngularJs'
+        }
+    });
+    $stateProvider.state('archive.css', {
+        url: '/css',
+        templateUrl: 'css.html',
+        controller: 'mainController',
+        ncyBreadcrumb: {
+          label: 'Css'
+        }
     });
     $urlRouterProvider.otherwise('/');
 }]);
@@ -29,11 +51,20 @@ app.controller("mainController", ['$scope', '$state', function($scope, $state){
         description:""
     };
 
-    $scope.posts = [{
-        title: "Angular Js",
-        href: "angularjs",
-        contents: [{
-            subtitle: "Difference between One way and Two way data binding"
-        }]
-    }];
+    $scope.articals = [
+        {
+            title: "Css",
+            ui_sref: "archive.css",
+            contents: [{
+                subtitle: "Box Model"
+            }]
+        },
+        {
+            title: "Angular Js",
+            ui_sref: "archive.angularjs",
+            contents: [{
+                subtitle: "Difference between One way and Two way data binding"
+            }]
+        }
+]   ;
 }]);
