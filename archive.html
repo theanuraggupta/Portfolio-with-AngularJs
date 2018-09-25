@@ -1,29 +1,34 @@
-<div id="archive">
-    <div class="container">
-        <div ncy-breadcrumb ng-if="$state.current.name!=='archive'"></div>
-        <div ng-if="$state.current.name==='archive'" class="clear clearfix ">
-            <div class="position-relative">
-                <div class="text-center">
-                    <h3 style="width:100%;display:inline-block;word-break: break-word;white-space: normal;">Archive&nbsp;&nbsp;<i class="fas fa-rss" style="display:inline; color:orange"></i>&nbsp;&nbsp;Work in progress...</h3>
-                </div>
-                <div class="input-group input-group-sm col-md-3 col-xs-12 position-absolute" style="right: 0;bottom: 0;">
-                    <input type="text" class="form-control" placeholder="Search" ng-model="searchField" autocomplete="off" />
-                    <span class="input-group-addon search-addon"><i class="fa fa-search"></i></span>
-                </div>
-            </div>
-            <hr class="margin-top-5">
-            <div class="tag-container row text-center">
-                <span class="post-tag" ng-repeat="artical in articals | orderBy: 'title' | filter: searchField">
-                    <a ui-sref="{{artical.ui_sref}}">
-                        <i class="fas fa-tag"></i>
-                        <span ng-bind="::artical.title"></span>
-                    </a>
-                </span>
-                <div ng-if="!(articals | filter: searchField).length" style="color:#adabab;margin-top: 20px;"><i class="fas fa-exclamation-triangle fa-lg"></i>&nbsp;<strong>No artical found. </strong></div>
-                <hr>
-            </div>
+
+<div class="container" ng-if="$state.current.name==='archive'">
+    <div class="position-relative clear clearfix">
+        <h3 style="display:inline-block;word-break: break-word;white-space: normal;">Archive&nbsp;&nbsp;<i class="fa fa-rss" style="display:inline; color:orange"></i>&nbsp;&nbsp;Work in progress...</h3>
+        <div class="form-group-sm col-md-3 col-xs-12 position-relative">
+            <input type="text" class="form-control input-xs" placeholder="Search" ng-model="searchField" autocomplete="off" />
+            <i class="fa fa-search"></i>
         </div>
-        <br>
-        <ui-view></ui-view>
     </div>
+    <hr class="margin-top-5">
+    <div class="tag" ng-repeat="artical in articals | orderBy: 'title' | filter: searchField">
+        <a ui-sref="{{artical.ui_sref}}">
+            <i class="fa fa-tags"></i>
+            <span ng-bind="::artical.title"></span>&nbsp;
+        </a>
+    </div>
+    <div ng-if="!(articals | filter: searchField).length" style="color:#adabab;margin-top: 20px;"><i class="fa fa-exclamation-triangle fa-lg"></i>&nbsp;<strong>No artical found. </strong></div>
+</div>
+<hr ng-if="$state.current.name==='archive'">
+<div class="container" ng-if="$state.current.name==='archive'">
+    <div ng-repeat="artical in articals | orderBy: 'title' | filter: searchField" class="text-center">
+        <h4 ng-bind="::artical.title" style="text-transform:uppercase;"></h4>
+        <div class="row" ng-repeat="subtitle in artical.subtitles">
+            <h4>
+                <a ui-sref="{{artical.ui_sref}}" ng-bind="::subtitle.title"></a>
+            </h4>
+        </div>
+        <hr ng-hide="$last">
+    </div>
+</div>
+<div class="container" ng-if="$state.current.name!=='archive'">
+    <div ncy-breadcrumb></div>
+    <ui-view></ui-view>
 </div>

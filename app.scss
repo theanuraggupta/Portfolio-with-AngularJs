@@ -23,6 +23,14 @@ li{
     list-style: none;
 }
 
+i{
+    color: #000;
+}
+
+.margin-top-5{
+    margin-top: 10px!important;
+}
+
 .padding-top-25{
     padding-top: 25px;
 }
@@ -71,8 +79,33 @@ body{
     max-width: 800px;
     text-align: center;
     .text-muted{
-        margin: 20px 0;
+        margin: 30px 0 0 0;
         color:#6b6b6b;
+    }
+    .tag{
+        display: inline-block;
+        background: rgba(106,159,181,0.15);
+        color: #000 !important;
+        padding: 0 .5rem;
+        margin-right: .8rem;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+        border-radius: 4px;
+        &:hover{
+            text-decoration: none;
+            transform: scale(1.07);
+        }
+    }
+    
+    .form-group-sm{
+        top: 30px;
+        float: right;
+        @include padding(0, 5px, 5px, 5px);
+        i{
+            position: absolute;
+            right: 12%;
+            top: 8px;
+        }
     }
 }
 
@@ -84,7 +117,7 @@ body{
 }
 
 .social{
-    padding-top: 12px;
+    padding-top: 10px;
     word-spacing: 25px;
     h4{
         a{
@@ -96,33 +129,9 @@ body{
     }
 }
 
-
-#archive{
-    .container{
-        position: relative;
-        width: 75%;
-        padding: 10px;
-        border-radius: 2px;
-        border: 1px solid #000;
-        .tag-container{
-            display: inline-block;
-            .post-tag {
-                display: inline-block;
-                color: $base-color !important;
-                background: rgba(91, 173, 206, 0.22);
-                @include padding(0, 0.5rem, 0, .5rem);
-                margin-right: .8rem;
-                margin-top: .5rem;
-                margin-bottom: .5rem;
-                border-radius: 4px;                
-                &:hover{
-                    color: $base-color !important;
-                    text-decoration: none;
-                    transform: scale(1.07);
-                }
-            }
-        }
-    }
+.footer{
+    border-bottom: 5px solid #27A822;
+    margin-top: 10px;
 }
 
 .breadcrumb{
@@ -142,12 +151,6 @@ body{
 
 /* For mobile phones: */
 @media only screen and (max-width: 599px) {
-    #archive{
-        .container{
-            width: 100%;
-            padding: 10px;
-        }
-    }
     
     .navbar {
         height: 30px;
@@ -157,28 +160,41 @@ body{
             margin-bottom: 0;
         }
     }
+
     .navbar-brand{
         padding: 5px 15px;
         height: 30px;
     }
+
     .pull-right li:first-child{
         padding-right: 2px;
     }
+
     .social,
     .padding-top-25{
-        padding-top: 0px !important;
+        padding-top: 2px !important;
     }
+
     h3{
         font-size: 16px;
         margin-top: 10px;
     }
+
     .navbar,
     h6{
         margin-bottom: 0!important;
     }
+
     footer{
         p{
             margin: 24px 0 0 0;
+        }
+    }
+
+    .container .form-group-sm{
+        top: 0;
+        i{
+            right: 4%;
         }
     }
 }

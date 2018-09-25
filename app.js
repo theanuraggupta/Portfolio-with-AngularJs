@@ -55,15 +55,15 @@ app.controller("mainController", ['$scope', '$state', function($scope, $state){
         {
             title: "Css",
             ui_sref: "archive.css",
-            contents: [{
-                subtitle: "Box Model"
+            subtitles: [{
+                title: "Box Model"
             }]
         },
         {
             title: "Angular Js",
             ui_sref: "archive.angularjs",
-            contents: [{
-                subtitle: "Difference between One way and Two way data binding"
+            subtitles: [{
+                title: "Difference between One way and Two way data binding"
             }]
         }
 ]   ;
