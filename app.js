@@ -32,14 +32,6 @@ app.config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function($s
           label: 'AngularJs'
         }
     });
-    $stateProvider.state('archive.css', {
-        url: '/css',
-        templateUrl: 'css.html',
-        controller: 'mainController',
-        ncyBreadcrumb: {
-          label: 'Css'
-        }
-    });
     $urlRouterProvider.otherwise('/');
 }]);
 app.controller("mainController", ['$scope', '$state', function($scope, $state){
@@ -52,13 +44,6 @@ app.controller("mainController", ['$scope', '$state', function($scope, $state){
     };
 
     $scope.articals = [
-        {
-            title: "Css",
-            ui_sref: "archive.css",
-            subtitles: [{
-                title: "Box Model"
-            }]
-        },
         {
             title: "Angular Js",
             ui_sref: "archive.angularjs",
