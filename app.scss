@@ -1,6 +1,6 @@
 $white: #fff;
 $base-color: #27A822;
-$base-color-hover: #27A823;
+$base-color-hover: rgb(18, 105, 15);
 $nav-anchor: #6b6b6b;
 
 .base-color{
@@ -118,9 +118,9 @@ footer a,
     word-spacing: 25px;
     h4{
         a{
-            color: #000!important;
+            color: $base-color!important;
             &:hover{
-                color: $base-color!important;
+                color: $base-color-hover!important;
             }
         }
     }
