@@ -8,10 +8,14 @@ HTML, AngularJS, SCSS, Bootstrap
 
 Desktop View
 
-![angular-page-1](https://user-images.githubusercontent.com/15166401/45123481-aeb99f00-b184-11e8-9d8a-59cdd19f9405.PNG)
+![screenshot_2018-10-31 anurag gupta](https://user-images.githubusercontent.com/15166401/47780446-6c928100-dd21-11e8-8af9-7fc64906d758.png)
 
+Table View
+
+![screen shot 2018-10-31 at 15 25 26](https://user-images.githubusercontent.com/15166401/47780504-8338d800-dd21-11e8-8cd5-93e2bfc4c2f9.png)
 
 Mobile View
 
-![angular-page-2](https://user-images.githubusercontent.com/15166401/45123496-bda05180-b184-11e8-95e7-5299bf92be5e.PNG)
+![screen shot 2018-10-31 at 15 17 24](https://user-images.githubusercontent.com/15166401/47780404-55ec2a00-dd21-11e8-85ba-8decf6d84adf.png)
+
 
