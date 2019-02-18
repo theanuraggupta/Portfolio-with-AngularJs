@@ -1,0 +1,38 @@
+
+<div class="container">
+    <div ng-if="$state.current.name==='archive'">
+        <div class="position-relative clear clearfix">
+            <h3 style="display:inline-block;word-break: break-word;white-space: normal;">Archive&nbsp;&nbsp;<i class="fa fa-rss" style="display:inline; color:orange"></i>&nbsp;&nbsp;Work in progress...</h3>
+            <div class="form-group-sm col-md-3 col-xs-12 position-relative">
+                <input type="text" class="form-control input-xs" placeholder="Search" ng-model="searchField" autocomplete="off" />
+                <i class="fa fa-search"></i>
+            </div>
+        </div>
+        <hr class="margin-top-5">
+        <div class="tag" ng-repeat="artical in articals | orderBy: 'title' | filter: searchField">
+            <a ui-sref="{{artical.ui_sref}}">
+                <i class="fa fa-tags"></i>
+                <span ng-bind="::artical.title"></span>&nbsp;
+            </a>
+        </div>
+        <div ng-if="!(articals | filter: searchField).length" style="color:#adabab;margin-top: 20px;"><i class="fa fa-exclamation-triangle fa-lg"></i>&nbsp;<strong>No artical found. </strong></div>
+
+        <hr ng-if="$state.current.name==='archive'" style="margin-right:-30%;margin-left:-30%;">
+
+        <div ng-repeat="artical in articals | orderBy: 'title' | filter: searchField" class="text-center">
+            <h4 ng-bind="::artical.title" style="text-transform:uppercase;"></h4>
+            <div class="row" ng-repeat="subtitle in artical.subtitles">
+                <h4>
+                    <a ui-sref="{{artical.ui_sref}}" ng-bind="::subtitle.title"></a>
+                </h4>
+            </div>
+            <hr ng-hide="$last">
+        </div>
+    </div>
+    <div ng-if="$state.current.name!=='archive'">
+        <div ncy-breadcrumb></div>
+        <ui-view>
+            <div class="container"></div>
+        </ui-view>
+    </div>
+</div>
